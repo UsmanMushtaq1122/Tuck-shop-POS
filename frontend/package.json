@@ -1,0 +1,64 @@
+{
+  "name": "tuck-shop-pos-frontend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Tuck Shop POS Frontend",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron-dev": "electron .",
+    "electron-full": "concurrently \"cd ../backend && node index.js\" \"npm run electron-dev\""
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "@reduxjs/toolkit": "^2.12.0",
+    "axios": "^1.16.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "electron-log": "^5.0.0",
+    "electron-store": "^8.1.0",
+    "framer-motion": "^10.16.5",
+    "lucide-react": "^0.294.0",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-redux": "^9.3.0",
+    "react-router-dom": "^6.20.0",
+    "recharts": "^2.10.3",
+    "tailwind-merge": "^2.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "electron": "^27.1.0",
+    "electron-builder": "^24.9.1",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "^5.0.4"
+  },
+  "build": {
+    "appId": "com.tuckshop.pos",
+    "productName": "Tuck Shop POS",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

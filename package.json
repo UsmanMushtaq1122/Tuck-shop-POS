@@ -1,0 +1,16 @@
+{
+  "name": "tuck-shop-pos",
+  "version": "1.0.0",
+  "description": "Tuck Shop POS - Point of Sale System",
+  "scripts": {
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npm start",
+    "build": "cd frontend && npm run build",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "seed": "cd backend && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
